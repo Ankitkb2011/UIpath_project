@@ -1,0 +1,862 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1205,7060" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Diagnostics;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="42">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="70">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="1215,6895" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="datatable" />
+      <Variable x:TypeArguments="x:String" Name="record" />
+      <Variable x:TypeArguments="sd:DataTable" Name="RecordingDate" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:GetProcesses ContinueOnError="{x:Null}" Processes="{x:Null}" DisplayName="Get Processes" sap:VirtualizedContainerService.HintSize="1173,22" sap2010:WorkflowViewState.IdRef="GetProcesses_1" />
+    <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="1173,939" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="http://niceunify.tinslab.local/NiceApplications/Desktop/XbapApplications/NiceDesktop.xbap">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,838" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="imgExist" />
+              <Variable x:TypeArguments="ui:UiElement" Name="FoundElement" />
+              <Variable x:TypeArguments="sd:DataTable" Name="csvvalue" />
+              <Variable x:TypeArguments="x:String" Name="dtvalue" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="20000" DelayMS="5000" DisplayName="Type Into 'WindowsForms10.EDIT.app...'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="nice">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7edfd72c-52ca-488b-99af-bebef0962fed" InformativeScreenshot="77ccafe644335fdd10661df8bf6a0c70" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='NICE Application Suite - Internet Explorer' /&gt;&lt;wnd ctrlname='PerformWrapper' /&gt;&lt;wnd ctrlname='Login' /&gt;&lt;wnd ctrlname='LoginScreen' /&gt;&lt;wnd ctrlname='panel2' /&gt;&lt;wnd ctrlname='tbLoginName' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="2000" DelayMS="12000" DisplayName="Type Into 'WindowsForms10.EDIT.app...'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="India@123[k(enter)]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ebabf2a6-7486-4d60-b755-3e22b94dcee7" InformativeScreenshot="311c6f2c43259cb9bcc22b54e66583b8" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='NICE Application Suite - Internet Explorer' /&gt;&lt;wnd ctrlname='PerformWrapper' /&gt;&lt;wnd ctrlname='Login' /&gt;&lt;wnd ctrlname='LoginScreen' /&gt;&lt;wnd ctrlname='panel2' /&gt;&lt;wnd ctrlname='tbPassword' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:Click CursorMotionType="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DelayBefore="2000" DelayMS="15000" DisplayName="Click 'WindowsForms10.Window.8...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5eb48c11-bb86-441b-9e5f-2ecb41f0b857" InformativeScreenshot="e858855381fd6d0fce526e7dc5d47646" Selector="&lt;wnd app='presentationhost.exe' ctrlname='StyledMessageBoxEx' /&gt;&lt;wnd ctrlname='pnlButtom' /&gt;&lt;wnd ctrlname='btnOK' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" ContinueOnError="False" DelayBefore="5000" DelayMS="2000" DisplayName="Double Click" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="47923216-4bdd-4b34-a1ad-667e223fd63a" InformativeScreenshot="013a42f6665941f651fa88e2f48b89d0" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='NICE Application Suite - Internet Explorer' /&gt;&lt;wnd ctrlname='PerformWrapper' /&gt;&lt;wnd ctrlname='PerformDesktop' /&gt;&lt;wnd ctrlname='desktopPanel' /&gt;&lt;wnd ctrlname='pnlOuter' /&gt;&lt;wnd ctrlname='TabDesktop' /&gt;&lt;wnd ctrlname='containerPanel' /&gt;&lt;wnd ctrlname='queryContainer' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='pnlQueryLayout' /&gt;&lt;wnd ctrlname='queryLayout1' /&gt;&lt;wnd ctrlname='styledVerticalPanel1' /&gt;&lt;wnd ctrlname='layoutTreePanel' /&gt;&lt;wnd ctrlname='layoutTree' /&gt;&lt;wnd ctrlname='treeView' /&gt;&lt;ctrl name='Queries Tree' role='outline' /&gt;&lt;ctrl name='Queries  ' role='outline item' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DelayBefore="1000" DelayMS="1000" DisplayName="Double Click" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_42" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="50652b79-8520-4b7a-ac89-0e112f14994d" InformativeScreenshot="0ce0f3fc1f73b15783753ec8845d0865" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='NICE Application Suite - Internet Explorer' /&gt;&lt;wnd ctrlname='PerformWrapper' /&gt;&lt;wnd ctrlname='PerformDesktop' /&gt;&lt;wnd ctrlname='desktopPanel' /&gt;&lt;wnd ctrlname='pnlOuter' /&gt;&lt;wnd ctrlname='TabDesktop' /&gt;&lt;wnd ctrlname='containerPanel' /&gt;&lt;wnd ctrlname='queryContainer' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='pnlQueryLayout' /&gt;&lt;wnd ctrlname='queryLayout1' /&gt;&lt;wnd ctrlname='styledVerticalPanel1' /&gt;&lt;wnd ctrlname='layoutTreePanel' /&gt;&lt;wnd ctrlname='layoutTree' /&gt;&lt;wnd ctrlname='treeView' /&gt;&lt;ctrl name='Queries Tree' role='outline' /&gt;&lt;ctrl name='Private' role='outline item' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+    <ui:DatabaseConnect DatabaseConnection="{x:Null}" DisplayName="Connect" sap:VirtualizedContainerService.HintSize="1173,59" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.SqlClient" ConnectionString="Data Source=45.122.120.115,1433;Initial Catalog=NiceDB;User ID=tinslab;Password=T!nsl@b#$123" />
+    <ui:ExecuteQuery ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[RecordingDate]" DisplayName="Execute Query" sap:VirtualizedContainerService.HintSize="1173,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_4" ProviderName="System.Data.SqlClient" Sql="exec DistinctDate_proc 'Robot2'" ConnectionString="Data Source=45.122.120.115,1433;Initial Catalog=NiceDB;User ID=tinslab;Password=T!nsl@b#$123">
+      <ui:ExecuteQuery.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:ExecuteQuery.Parameters>
+    </ui:ExecuteQuery>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[RecordingDate]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1173,5535" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row1" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1139,5415" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="datedate2" />
+              <Variable x:TypeArguments="s:String[]" Name="strarr" />
+              <Variable x:TypeArguments="sd:DataTable" Name="Record" />
+              <Variable x:TypeArguments="sd:DataTable" Name="Interaction" />
+              <Variable x:TypeArguments="x:Int32" Name="Count" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1097,258" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,180" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ExecuteQuery ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[datatable]" DisplayName="Execute Query" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" ProviderName="System.Data.SqlClient" Sql="[&quot;insert into tblCallsDownloaded (InteractionID,Downloadflag,InteractionLocalStartTime,ExtensionNo) select  Interact.InteractionID,'N' , Interact.InteractionLocalStartTime,Interact.DialedNumber from VW_InteractionDetails_Simcomm Interact  left  join tblCallsDownloaded calls on calls.InteractionID=Interact.InteractionId where media=2 and calls.InteractionID is null   and cast(Interact.InteractionLocalStartTime as date)='&quot;+ Row1(&quot;InteractionLocalStartTime&quot;).ToString+&quot;' &quot;]" ConnectionString="Data Source=45.122.120.115,1433;Initial Catalog=NiceDB;User ID=tinslab;Password=T!nsl@b#$123">
+                    <ui:ExecuteQuery.Parameters>
+                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                    </ui:ExecuteQuery.Parameters>
+                  </ui:ExecuteQuery>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="1097,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[&quot;C:\RecodringCall\Recording&quot;+Row1(&quot;InteractionLocalStartTime&quot;).ToString]" />
+            <Assign sap:VirtualizedContainerService.HintSize="1097,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[datedate2]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[Row1("InteractionLocalStartTime").ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="1097,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[strarr]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[Split(datedate2,"-")]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="1097,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[Count]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">0</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ExecuteQuery ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[Interaction]" DisplayName="Execute Query" sap:VirtualizedContainerService.HintSize="1097,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_6" ProviderName="System.Data.SqlClient" Sql="[&quot;select  calls.InteractionID from TBLCALLSDOWNLOADED calls join VW_InteractionDetails_Simcomm Interaction on calls.InteractionID=Interaction.InteractionId  where DownloadFlag='N'  and cast(Interaction.InteractionLocalStartTime as date)='&quot;+ Row1(&quot;InteractionLocalStartTime&quot;).ToString+&quot;'&quot;]" ConnectionString="Data Source=45.122.120.115,1433;Initial Catalog=NiceDB;User ID=tinslab;Password=T!nsl@b#$123">
+              <ui:ExecuteQuery.Parameters>
+                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+              </ui:ExecuteQuery.Parameters>
+            </ui:ExecuteQuery>
+            <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="1097,4478" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+              <ui:InterruptibleWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1061,4313" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ExecuteQuery ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[Record]" DisplayName="Execute Query" sap:VirtualizedContainerService.HintSize="1019,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_3" ProviderName="System.Data.SqlClient" Sql="[&quot;exec DownloadNiceCalls2'&quot;+ Row1(&quot;InteractionLocalStartTime&quot;).ToString+&quot;'&quot;]" ConnectionString="Data Source=45.122.120.115,1433;Initial Catalog=NiceDB;User ID=tinslab;Password=T!nsl@b#$123">
+                    <ui:ExecuteQuery.Parameters>
+                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                    </ui:ExecuteQuery.Parameters>
+                  </ui:ExecuteQuery>
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Record]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1019,4093" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                    <ui:ForEachRow.Body>
+                      <ActivityAction x:TypeArguments="sd:DataRow">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="985,3974" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:Boolean" Name="imgeexit" />
+                            <Variable x:TypeArguments="sco:Collection(sd1:Process)" Name="Getproc" />
+                            <Variable x:TypeArguments="sco:Collection(sd1:Process)" Name="RunningProc" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If Condition="[CurrentRow.IsNull(&quot;SegmentId&quot;)]" sap:VirtualizedContainerService.HintSize="943,3882" sap2010:WorkflowViewState.IdRef="If_1">
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,344" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Close'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_51" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                  <ui:Click.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </ui:Click.CursorPosition>
+                                  <ui:Click.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a12076fd-9bfd-409d-92d4-93267c2c7735" InformativeScreenshot="7b019985f9acd388629761b1103594d8" Selector="&lt;wnd app='presentationhost.exe' ctrlname='InteractionAdvancedQuery' /&gt;&lt;ctrl name='Close' role='push button' /&gt;">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:Click.Target>
+                                </ui:Click>
+                                <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'WindowsForms10.Window.8...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_52" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                  <ui:Click.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </ui:Click.CursorPosition>
+                                  <ui:Click.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="294a55e6-3149-49f1-bde3-f7e1c6bdfd40" InformativeScreenshot="3b95a451c628e7ce7879292aef149b11" Selector="&lt;wnd app='presentationhost.exe' ctrlname='StyledMessageBoxEx' /&gt;&lt;wnd ctrlname='pnlButtom' /&gt;&lt;wnd ctrlname='btnYes' /&gt;">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:Click.Target>
+                                </ui:Click>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap:VirtualizedContainerService.HintSize="522,3725" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence sap:VirtualizedContainerService.HintSize="480,3633" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="1000" DisplayName="Click 'outline item'" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="Click_53" KeyModifiers="None" MouseButton="BTN_RIGHT">
+                                    <ui:Click.CursorPosition>
+                                      <ui:CursorPosition Position="Center">
+                                        <ui:CursorPosition.OffsetX>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetX>
+                                        <ui:CursorPosition.OffsetY>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetY>
+                                      </ui:CursorPosition>
+                                    </ui:Click.CursorPosition>
+                                    <ui:Click.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c7e7e1e2-dd46-4417-9031-c69899eef17d" InformativeScreenshot="ee2723d9c773972cb044191d4dbf4bc5" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='NICE Application Suite - Internet Explorer' /&gt;&lt;wnd ctrlname='PerformWrapper' /&gt;&lt;wnd ctrlname='PerformDesktop' /&gt;&lt;wnd ctrlname='desktopPanel' /&gt;&lt;wnd ctrlname='pnlOuter' /&gt;&lt;wnd ctrlname='TabDesktop' /&gt;&lt;wnd ctrlname='containerPanel' /&gt;&lt;wnd ctrlname='queryContainer' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='pnlQueryLayout' /&gt;&lt;wnd ctrlname='queryLayout1' /&gt;&lt;wnd ctrlname='styledVerticalPanel1' /&gt;&lt;wnd ctrlname='layoutTreePanel' /&gt;&lt;wnd ctrlname='layoutTree' /&gt;&lt;wnd ctrlname='treeView' /&gt;&lt;ctrl name='Queries Tree' role='outline' /&gt;&lt;ctrl name='TestInteractions' role='outline item' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:Click.Target>
+                                  </ui:Click>
+                                  <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click 'WindowsForms10.Window.8...'" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="Click_54" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                    <ui:Click.CursorPosition>
+                                      <ui:CursorPosition Position="Center">
+                                        <ui:CursorPosition.OffsetX>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetX>
+                                        <ui:CursorPosition.OffsetY>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetY>
+                                      </ui:CursorPosition>
+                                    </ui:Click.CursorPosition>
+                                    <ui:Click.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37e3f87d-5154-405b-80b8-a3ad336bd0ee" InformativeScreenshot="6e24c6b52247ab990c441d3e37c3636c" Selector="&lt;wnd app='presentationhost.exe' cls='#32768' idx='*' /&gt;&lt;ctrl name='Context' role='popup menu' /&gt;&lt;ctrl automationid='266' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:Click.Target>
+                                  </ui:Click>
+                                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'WindowsForms10.SysDateT...'" sap:VirtualizedContainerService.HintSize="438,134" sap2010:WorkflowViewState.IdRef="TypeInto_10" Text="[strarr(0).ToString+ &quot;[k(right)]&quot;+strarr(1).ToString+ &quot;[k(right)]&quot;+strarr(2).ToString]">
+                                    <ui:TypeInto.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="afff2993-ac14-4eb9-a9f5-65509d0f7253" InformativeScreenshot="e2aede227780bc477eed53074c12c2e7" Selector="&lt;wnd app='presentationhost.exe' ctrlname='InteractionAdvancedQuery' /&gt;&lt;wnd ctrlname='filtersPanel' /&gt;&lt;wnd ctrlname='collapsiblePanelBar1' /&gt;&lt;wnd ctrlname='panel1' idx='4' /&gt;&lt;wnd ctrlname='TimeFrameInteractionAdvancedFilter' /&gt;&lt;wnd ctrlname='fromDatePicker' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:TypeInto.Target>
+                                  </ui:TypeInto>
+                                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'WindowsForms10.SysDateT...'" sap:VirtualizedContainerService.HintSize="438,134" sap2010:WorkflowViewState.IdRef="TypeInto_11" Text="[strarr(0).ToString+ &quot;[k(right)]&quot;+strarr(1).ToString+ &quot;[k(right)]&quot;+strarr(2).ToString]">
+                                    <ui:TypeInto.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="afff2993-ac14-4eb9-a9f5-65509d0f7253" InformativeScreenshot="c4cdcd5c9a98756b64270350ce4ab274" Selector="&lt;wnd app='presentationhost.exe' ctrlname='InteractionAdvancedQuery' /&gt;&lt;wnd ctrlname='filtersPanel' /&gt;&lt;wnd ctrlname='collapsiblePanelBar1' /&gt;&lt;wnd ctrlname='panel1' idx='4' /&gt;&lt;wnd ctrlname='TimeFrameInteractionAdvancedFilter' /&gt;&lt;wnd ctrlname='toDatePicker' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:TypeInto.Target>
+                                  </ui:TypeInto>
+                                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'explorer.exe'" EmptyField="True" sap:VirtualizedContainerService.HintSize="438,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[CurrentRow(&quot;SegmentId&quot;).ToString]">
+                                    <ui:TypeInto.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="abc51d49-85f0-4240-8953-e40ccb3081a8" InformativeScreenshot="9c8a7636ecd08824a6f0aabedcca334d" Selector="&lt;wnd app='presentationhost.exe' ctrlname='InteractionAdvancedQuery' /&gt;&lt;wnd ctrlname='filtersPanel' /&gt;&lt;wnd ctrlname='collapsiblePanelBar1' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='InteractionSegmentIdAdvancedFilter' /&gt;&lt;wnd ctrlname='txtBoxSegmentIds' /&gt;&lt;ctrl role='editable text' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:TypeInto.Target>
+                                  </ui:TypeInto>
+                                  <ui:Click CursorMotionType="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" ContinueOnError="True" DelayBefore="2050" DelayMS="20000" DisplayName="Click 'WindowsForms10.Window.8...'" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="Click_46" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                    <ui:Click.CursorPosition>
+                                      <ui:CursorPosition Position="Center">
+                                        <ui:CursorPosition.OffsetX>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetX>
+                                        <ui:CursorPosition.OffsetY>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetY>
+                                      </ui:CursorPosition>
+                                    </ui:Click.CursorPosition>
+                                    <ui:Click.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="675c5877-988e-42ed-9292-989c07d5cc26" InformativeScreenshot="18dfc3f8fe1a1342c7ea51feb95c41e6" Selector="&lt;wnd app='presentationhost.exe' ctrlname='InteractionAdvancedQuery' /&gt;&lt;wnd ctrlname='panel_title' /&gt;&lt;wnd ctrlname='button_run' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:Click.Target>
+                                  </ui:Click>
+                                  <ui:SendHotkey DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" ClickBeforeTyping="False" ContinueOnError="True" DelayBefore="2000" DelayMS="2000" DisplayName="Send Hotkey 'client  Data Panel'" sap:VirtualizedContainerService.HintSize="438,154" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="a" KeyModifiers="Ctrl">
+                                    <ui:SendHotkey.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="06a55f06-06b6-4ead-904e-3e709c3e22b4" InformativeScreenshot="4044e98caab9acda296e56fefbda3f51" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='NICE Application Suite - Internet Explorer' /&gt;&lt;wnd ctrlname='PerformWrapper' /&gt;&lt;wnd ctrlname='PerformDesktop' /&gt;&lt;wnd ctrlname='desktopPanel' /&gt;&lt;wnd ctrlname='pnlOuter' /&gt;&lt;wnd ctrlname='TabDesktop' /&gt;&lt;wnd ctrlname='containerPanel' /&gt;&lt;wnd ctrlname='queryContainer' /&gt;&lt;wnd ctrlname='queryResults' /&gt;&lt;wnd ctrlname='tableViewPanel' /&gt;&lt;wnd ctrlname='segResults' /&gt;&lt;ctrl name='Data Panel' role='client' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:SendHotkey.Target>
+                                  </ui:SendHotkey>
+                                  <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'cell  Score row 3'" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="Click_55" KeyModifiers="None" MouseButton="BTN_RIGHT">
+                                    <ui:Click.CursorPosition>
+                                      <ui:CursorPosition Position="Center">
+                                        <ui:CursorPosition.OffsetX>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetX>
+                                        <ui:CursorPosition.OffsetY>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetY>
+                                      </ui:CursorPosition>
+                                    </ui:Click.CursorPosition>
+                                    <ui:Click.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3f3e3149-cd6a-48ed-9e27-014abb416f00" InformativeScreenshot="64934bdb7cb59f7e8cfd2ada787e2a95" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='NICE Application Suite - Internet Explorer' /&gt;&lt;wnd ctrlname='PerformWrapper' /&gt;&lt;wnd ctrlname='PerformDesktop' /&gt;&lt;wnd ctrlname='desktopPanel' /&gt;&lt;wnd ctrlname='pnlOuter' /&gt;&lt;wnd ctrlname='TabDesktop' /&gt;&lt;wnd ctrlname='containerPanel' /&gt;&lt;wnd ctrlname='queryContainer' /&gt;&lt;wnd ctrlname='queryResults' /&gt;&lt;wnd ctrlname='tableViewPanel' /&gt;&lt;wnd ctrlname='segResults' /&gt;&lt;ctrl name='Row 1' role='row' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:Click.Target>
+                                  </ui:Click>
+                                  <ui:SendHotkey DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="False" ContinueOnError="True" DelayBefore="2000" DelayMS="2000" DisplayName="Send Hotkey 'client  Data Panel'" sap:VirtualizedContainerService.HintSize="438,154" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="s" KeyModifiers="Shift" SpecialKey="False">
+                                    <ui:SendHotkey.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="06a55f06-06b6-4ead-904e-3e709c3e22b4" InformativeScreenshot="4044e98caab9acda296e56fefbda3f51" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='NICE Application Suite - Internet Explorer' /&gt;&lt;wnd ctrlname='PerformWrapper' /&gt;&lt;wnd ctrlname='PerformDesktop' /&gt;&lt;wnd ctrlname='desktopPanel' /&gt;&lt;wnd ctrlname='pnlOuter' /&gt;&lt;wnd ctrlname='TabDesktop' /&gt;&lt;wnd ctrlname='containerPanel' /&gt;&lt;wnd ctrlname='queryContainer' /&gt;&lt;wnd ctrlname='queryResults' /&gt;&lt;wnd ctrlname='tableViewPanel' /&gt;&lt;wnd ctrlname='segResults' /&gt;&lt;ctrl name='Data Panel' role='client' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:SendHotkey.Target>
+                                  </ui:SendHotkey>
+                                  <ui:SendHotkey DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="False" ContinueOnError="True" DelayBefore="1000" DelayMS="1000" DisplayName="Send Hotkey 'client  Data Panel'" sap:VirtualizedContainerService.HintSize="438,154" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="s" KeyModifiers="Shift" SpecialKey="False">
+                                    <ui:SendHotkey.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="06a55f06-06b6-4ead-904e-3e709c3e22b4" InformativeScreenshot="4044e98caab9acda296e56fefbda3f51" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='NICE Application Suite - Internet Explorer' /&gt;&lt;wnd ctrlname='PerformWrapper' /&gt;&lt;wnd ctrlname='PerformDesktop' /&gt;&lt;wnd ctrlname='desktopPanel' /&gt;&lt;wnd ctrlname='pnlOuter' /&gt;&lt;wnd ctrlname='TabDesktop' /&gt;&lt;wnd ctrlname='containerPanel' /&gt;&lt;wnd ctrlname='queryContainer' /&gt;&lt;wnd ctrlname='queryResults' /&gt;&lt;wnd ctrlname='tableViewPanel' /&gt;&lt;wnd ctrlname='segResults' /&gt;&lt;ctrl name='Data Panel' role='client' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:SendHotkey.Target>
+                                  </ui:SendHotkey>
+                                  <ui:SendHotkey DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="False" ContinueOnError="True" DelayBefore="1000" DelayMS="1000" DisplayName="Send Hotkey 'client  Data Panel'" sap:VirtualizedContainerService.HintSize="438,154" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="s" KeyModifiers="Shift" SpecialKey="False">
+                                    <ui:SendHotkey.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="06a55f06-06b6-4ead-904e-3e709c3e22b4" InformativeScreenshot="4044e98caab9acda296e56fefbda3f51" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='NICE Application Suite - Internet Explorer' /&gt;&lt;wnd ctrlname='PerformWrapper' /&gt;&lt;wnd ctrlname='PerformDesktop' /&gt;&lt;wnd ctrlname='desktopPanel' /&gt;&lt;wnd ctrlname='pnlOuter' /&gt;&lt;wnd ctrlname='TabDesktop' /&gt;&lt;wnd ctrlname='containerPanel' /&gt;&lt;wnd ctrlname='queryContainer' /&gt;&lt;wnd ctrlname='queryResults' /&gt;&lt;wnd ctrlname='tableViewPanel' /&gt;&lt;wnd ctrlname='segResults' /&gt;&lt;ctrl name='Data Panel' role='client' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:SendHotkey.Target>
+                                  </ui:SendHotkey>
+                                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'menu item  Save Calls'" sap:VirtualizedContainerService.HintSize="438,134" sap2010:WorkflowViewState.IdRef="TypeInto_12" Text="%[k(enter)]">
+                                    <ui:TypeInto.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3f8d61e3-dab3-4818-9081-ee35b5bec9e2" InformativeScreenshot="5ef229655a90bb73b42e2c5f6acd8419" Selector="&lt;wnd app='presentationhost.exe' cls='#32768' idx='*' /&gt;&lt;ctrl name='Context' role='popup menu' /&gt;&lt;ctrl automationid='281' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:TypeInto.Target>
+                                  </ui:TypeInto>
+                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,1169" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                    <TryCatch.Variables>
+                                      <Variable x:TypeArguments="x:String" Name="variable1" />
+                                    </TryCatch.Variables>
+                                    <TryCatch.Try>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="376,920" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" AlterIfDisabled="True" DelayBefore="4000" DelayMS="2000" DisplayName="Type Into 'WindowsForms10.EDIT.app...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_13" Text="Test">
+                                          <ui:TypeInto.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2520adf7-0130-4399-a2ff-c77d022e8abc" InformativeScreenshot="582f42e0ca1c832cee0192c54c66f75e" Selector="&lt;wnd app='presentationhost.exe' ctrlname='SaveForm' /&gt;&lt;wnd ctrlname='prefixbox' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:TypeInto.Target>
+                                        </ui:TypeInto>
+                                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="1000" DelayMS="1000" DisplayName="Type Into 'WindowsForms10.EDIT.app...'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_18" Text="[&quot;C:\RecodringCall\Recording&quot;+Row1(&quot;InteractionLocalStartTime&quot;).ToString+ &quot;[k(tab)][k(tab)][k(down)]&quot;]">
+                                          <ui:TypeInto.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="034c1eed-caa7-4014-98b7-84a3c1f10927" InformativeScreenshot="fcb26752f6196f125bcbdbd1e7cd758a" Selector="&lt;wnd app='presentationhost.exe' ctrlname='SaveForm' /&gt;&lt;wnd ctrlname='Barlocation' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:TypeInto.Target>
+                                        </ui:TypeInto>
+                                        <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="1000" DelayMS="11000" DisplayName="Click 'WindowsForms10.Window.8...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_65" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                          <ui:Click.CursorPosition>
+                                            <ui:CursorPosition Position="Center">
+                                              <ui:CursorPosition.OffsetX>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetX>
+                                              <ui:CursorPosition.OffsetY>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetY>
+                                            </ui:CursorPosition>
+                                          </ui:Click.CursorPosition>
+                                          <ui:Click.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5db66d88-837b-4dbf-872d-88c2e966981c" InformativeScreenshot="b4de11deffbb764e6d78bc23341d1027" Selector="&lt;wnd app='presentationhost.exe' ctrlname='SaveForm' /&gt;&lt;wnd ctrlname='Savebtn' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:Click.Target>
+                                        </ui:Click>
+                                        <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="2000" DisplayName="Click 'WindowsForms10.Window.8...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_66" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                          <ui:Click.CursorPosition>
+                                            <ui:CursorPosition Position="Center">
+                                              <ui:CursorPosition.OffsetX>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetX>
+                                              <ui:CursorPosition.OffsetY>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetY>
+                                            </ui:CursorPosition>
+                                          </ui:Click.CursorPosition>
+                                          <ui:Click.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4bbc0399-7e62-470b-831d-dd015fc5840d" InformativeScreenshot="553ba437e0f9a9cf8db6ddb58cf1b385" Selector="&lt;wnd app='presentationhost.exe' ctrlname='SaveProgress' /&gt;&lt;wnd ctrlname='closebutton' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:Click.Target>
+                                        </ui:Click>
+                                        <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Query" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_13" ProviderName="System.Data.SqlClient" Sql="[&quot;exec UpdateINteractionID '&quot;+ CurrentRow(&quot;SegmentId&quot;).ToString+&quot;'&quot;]" ConnectionString="Data Source=45.122.120.115,1433;Initial Catalog=NiceDB;User ID=tinslab;Password=T!nsl@b#$123">
+                                          <ui:ExecuteQuery.Parameters>
+                                            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                          </ui:ExecuteQuery.Parameters>
+                                        </ui:ExecuteQuery>
+                                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:Int32">[Count]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:Int32">[Count+20]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                    </TryCatch.Try>
+                                    <TryCatch.Catches>
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ActivityAction x:TypeArguments="s:Exception">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                          </ActivityAction.Argument>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="376,581" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;System error&quot;]" />
+                                            <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'WindowsForms10.Window.8...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_57" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                              <ui:Click.CursorPosition>
+                                                <ui:CursorPosition Position="Center">
+                                                  <ui:CursorPosition.OffsetX>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:CursorPosition.OffsetX>
+                                                  <ui:CursorPosition.OffsetY>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:CursorPosition.OffsetY>
+                                                </ui:CursorPosition>
+                                              </ui:Click.CursorPosition>
+                                              <ui:Click.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="be9ea7e3-80ea-4896-ae6e-5aa1a7d7dd9f" InformativeScreenshot="90fc982f175b991e2981f1f045678dc2" Selector="&lt;wnd app='presentationhost.exe' ctrlname='PopUpMessagesForm' /&gt;&lt;wnd ctrlname='pnlButtom' /&gt;&lt;wnd ctrlname='btnClose' /&gt;">
+                                                  <ui:Target.TimeoutMS>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:Target.TimeoutMS>
+                                                  <ui:Target.WaitForReady>
+                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                  </ui:Target.WaitForReady>
+                                                </ui:Target>
+                                              </ui:Click.Target>
+                                            </ui:Click>
+                                            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="SendHotkey_6" Key="enter" KeyModifiers="None" SpecialKey="True">
+                                              <ui:SendHotkey.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="74b6cbfc-1cbe-4898-b281-3c8a124b6547">
+                                                  <ui:Target.TimeoutMS>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:Target.TimeoutMS>
+                                                  <ui:Target.WaitForReady>
+                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                  </ui:Target.WaitForReady>
+                                                </ui:Target>
+                                              </ui:SendHotkey.Target>
+                                            </ui:SendHotkey>
+                                            <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Query" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_8" ProviderName="System.Data.SqlClient" Sql="[&quot; update TBLCALLSDOWNLOADED set DownloadFlag='Y' ,Downloadtime=getdate() where InteractionId in(&quot;+CurrentRow(&quot;SegmentId2&quot;).ToString()+&quot;)&quot;]" ConnectionString="Data Source=45.122.120.115,1433;Initial Catalog=NiceDB;User ID=tinslab;Password=T!nsl@b#$123">
+                                              <ui:ExecuteQuery.Parameters>
+                                                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                              </ui:ExecuteQuery.Parameters>
+                                            </ui:ExecuteQuery>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </Catch>
+                                      <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ActivityAction x:TypeArguments="ui:SelectorNotFoundException">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
+                                          </ActivityAction.Argument>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="478,967" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,229" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                              <ui:CommentOut.Body>
+                                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,151" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;No record Found&quot;]" />
+                                                </Sequence>
+                                              </ui:CommentOut.Body>
+                                            </ui:CommentOut>
+                                            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="436,116" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="enter" KeyModifiers="None" SpecialKey="True">
+                                              <ui:SendHotkey.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="41de05db-e1a6-4afb-b209-d6129207469f">
+                                                  <ui:Target.TimeoutMS>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:Target.TimeoutMS>
+                                                  <ui:Target.WaitForReady>
+                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                  </ui:Target.WaitForReady>
+                                                </ui:Target>
+                                              </ui:SendHotkey.Target>
+                                            </ui:SendHotkey>
+                                            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="436,116" sap2010:WorkflowViewState.IdRef="SendHotkey_7" Key="enter" KeyModifiers="None" SpecialKey="True">
+                                              <ui:SendHotkey.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="41de05db-e1a6-4afb-b209-d6129207469f">
+                                                  <ui:Target.TimeoutMS>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:Target.TimeoutMS>
+                                                  <ui:Target.WaitForReady>
+                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                  </ui:Target.WaitForReady>
+                                                </ui:Target>
+                                              </ui:SendHotkey.Target>
+                                            </ui:SendHotkey>
+                                            <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'WindowsForms10.Window.8...'" sap:VirtualizedContainerService.HintSize="436,106" sap2010:WorkflowViewState.IdRef="Click_64" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                              <ui:Click.CursorPosition>
+                                                <ui:CursorPosition Position="Center">
+                                                  <ui:CursorPosition.OffsetX>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:CursorPosition.OffsetX>
+                                                  <ui:CursorPosition.OffsetY>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:CursorPosition.OffsetY>
+                                                </ui:CursorPosition>
+                                              </ui:Click.CursorPosition>
+                                              <ui:Click.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="be9ea7e3-80ea-4896-ae6e-5aa1a7d7dd9f" InformativeScreenshot="90fc982f175b991e2981f1f045678dc2" Selector="&lt;wnd app='presentationhost.exe' ctrlname='PopUpMessagesForm' /&gt;&lt;wnd ctrlname='pnlButtom' /&gt;&lt;wnd ctrlname='btnClose' /&gt;">
+                                                  <ui:Target.TimeoutMS>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:Target.TimeoutMS>
+                                                  <ui:Target.WaitForReady>
+                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                  </ui:Target.WaitForReady>
+                                                </ui:Target>
+                                              </ui:Click.Target>
+                                            </ui:Click>
+                                            <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Query" sap:VirtualizedContainerService.HintSize="436,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_12" ProviderName="System.Data.SqlClient" Sql="[&quot; update TBLCALLSDOWNLOADED set DownloadFlag='E' ,ErrorLog='No Record Found' ,Downloadtime=getdate() where InteractionId in(&quot;+CurrentRow(&quot;SegmentId2&quot;).ToString()+&quot;)&quot;]" ConnectionString="Data Source=45.122.120.115,1433;Initial Catalog=NiceDB;User ID=tinslab;Password=T!nsl@b#$123">
+                                              <ui:ExecuteQuery.Parameters>
+                                                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                              </ui:ExecuteQuery.Parameters>
+                                            </ui:ExecuteQuery>
+                                            <Assign sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:Int32">[Count]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:Int32">[Count+20]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </Catch>
+                                    </TryCatch.Catches>
+                                  </TryCatch>
+                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="438,276" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                    <ui:CommentOut.Body>
+                                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:Click CursorMotionType="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" ContinueOnError="True" DelayBefore="2000" DelayMS="27000" DisplayName="Click 'cell  Segment ID row 0'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_47" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                          <ui:Click.CursorPosition>
+                                            <ui:CursorPosition Position="Center">
+                                              <ui:CursorPosition.OffsetX>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetX>
+                                              <ui:CursorPosition.OffsetY>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetY>
+                                            </ui:CursorPosition>
+                                          </ui:Click.CursorPosition>
+                                          <ui:Click.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="623cdc21-eb44-498b-acd6-9fcd0fd95ba0" InformativeScreenshot="ad32218ba6ca5f2689eba6110716aa4f" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='NICE Application Suite - Internet Explorer' /&gt;&lt;wnd ctrlname='PerformWrapper' /&gt;&lt;wnd ctrlname='PerformDesktop' /&gt;&lt;wnd ctrlname='desktopPanel' /&gt;&lt;wnd ctrlname='pnlOuter' /&gt;&lt;wnd ctrlname='TabDesktop' /&gt;&lt;wnd ctrlname='containerPanel' /&gt;&lt;wnd ctrlname='queryContainer' /&gt;&lt;wnd ctrlname='queryResults' /&gt;&lt;wnd ctrlname='tableViewPanel' /&gt;&lt;wnd ctrlname='tableViewCommandPanel' /&gt;&lt;wnd ctrlname='save' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:Click.Target>
+                                        </ui:Click>
+                                      </Sequence>
+                                    </ui:CommentOut.Body>
+                                  </ui:CommentOut>
+                                </Sequence>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEachRow.Body>
+                  </ui:ForEachRow>
+                </Sequence>
+              </ui:InterruptibleWhile.Body>
+              <ui:InterruptibleWhile.Condition>
+                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Count&lt;Interaction.Rows.Count" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
+              </ui:InterruptibleWhile.Condition>
+            </ui:InterruptibleWhile>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+  </Sequence>
+</Activity>
