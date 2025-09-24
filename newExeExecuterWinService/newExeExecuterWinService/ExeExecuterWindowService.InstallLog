@@ -1,0 +1,13 @@
+﻿Installing assembly 'E:\UiPath-Project\newExeExecuterWinService\newExeExecuterWinService\ExeExecuterWindowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\UiPath-Project\newExeExecuterWinService\newExeExecuterWinService\ExeExecuterWindowService.InstallLog
+   assemblypath = E:\UiPath-Project\newExeExecuterWinService\newExeExecuterWinService\ExeExecuterWindowService.exe
+Installing service MyWinService...
+Service MyWinService has been successfully installed.
+Creating EventLog source MyWinService in log Application...
+Committing assembly 'E:\UiPath-Project\newExeExecuterWinService\newExeExecuterWinService\ExeExecuterWindowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\UiPath-Project\newExeExecuterWinService\newExeExecuterWinService\ExeExecuterWindowService.InstallLog
+   assemblypath = E:\UiPath-Project\newExeExecuterWinService\newExeExecuterWinService\ExeExecuterWindowService.exe

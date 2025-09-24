@@ -1,0 +1,7 @@
+Service is started at 10/5/2021 1:36:32 PM
+Service stopped at 10/5/2021 1:36:51 PM
+Service is started at 10/5/2021 1:36:53 PM
+Checked EXE status at 10/5/2021 1:38:53 PM
+Service stopped at 10/5/2021 1:40:06 PM
+Service is started at 10/5/2021 1:40:09 PM
+Service stopped at 10/5/2021 1:41:11 PM

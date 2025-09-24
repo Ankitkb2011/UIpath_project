@@ -1,0 +1,125 @@
+create proc Update_AgentStatus (@Employeeid  int)  
+as  
+begin  
+update tbl_PM_Users set Status=1,SDStatus='Working'  where EmployeeId=@Employeeid  
+end
+
+CREATE proc proc_avayaagent (@RequestType int)     
+as      
+begin      
+select EmployeeID,CAST(EmployeeId as varchar)+'_'+FirstName+'_'+Process  as Name, Password,Password as RePassword ,SkillNo,SkillLevel ,AgentID  
+from tbl_PM_Users  with(nolock) where RequestType=@RequestType and SDStatus='Open' and Status=0  
+end
+
+      
+      
+      
+          
+--Proc_inseert_agent_data 7806111,1405351,'WEIKFIELD','WNS Employees','ID Creation','For Process Requirement',              
+--361,'Telecom-BOM','', '<DS>          
+--  <DT>          
+--    <Column0>359690</Column0>          
+--    <Column1> Kothapalli Prabhakar Reddy</Column1>          
+--    <Column2>Con-way-Domestic Invoice Processing, international Invoice Processing, Vendor Master, Contractual Compliance, Fixed Assets, Quality, Financial Analysis, Customer Service Desk, Rental Equipment Audit, Oracle Hold, Manual Pay</Column2>       
+  
+   
+--  </DT>          
+--  <DT>          
+--    <Column0>361969</Column0>          
+--    <Column1> Kaushal Gorule</Column1>          
+--    <Column2>Con-way-Domestic Invoice Processing, international Invoice Processing, Vendor Master, Contractual Compliance, Fixed Assets, Quality, Financial Analysis, Customer Service Desk, Rental Equipment Audit, Oracle Hold, Manual Pay</Column2>       
+  
+   
+--  </DT>          
+--  </DS>'              
+              
+CREATE proc Proc_inseert_agent_data(              
+@id int,              
+@request_id int,              
+@Location varchar(200),              
+@Request_For varchar(200),              
+@Telecom_Request_For varchar(200),              
+@Business_Reason varchar(200),              
+@group_id  int,              
+@group_name varchar(200),              
+@Status varchar(200),         
+@item_name varchar(200),        
+@xmldata VARCHAR(MAX)              
+)                
+as                
+BEGIN                
+              
+              
+  DECLARE @hdoc INT                
+  EXEC sys.sp_xml_preparedocument @hdoc OUTPUT, @xmldata                  
+                
+  create table #subMenu([Employeeid] int,[EmployeeName] varchar(max),[Process] varchar(max))                
+  insert into #subMenu([Employeeid],[EmployeeName],Process)                
+  select [Column0] Empid,[Column1] Emp_name,[Column2] Process  from openxml (@hdoc, '/DS/DT',2)                    
+  with(                
+  [Column0] int ,                
+  [Column1] varchar(max),              
+  [Column2] varchar(max)               
+  )                     
+  Insert Into [tbl_PM_Users] (RequestId,RequestType,EmployeeId,Process,ProcessId,GroupId,GroupName,UserId,FirstName,MiddleName,LastName            
+ ,[User_Name],[Password],OSlogin,[Location],LocationId,[Site],Hiredate,GraduationDate,Switch,Extension,SDStatus,Status,Description,SkillNo,SkillLevel,COR            
+ ,CM,Recorder,IsDefault,InsertedDate,InsertedBy,item_Name,Business_Resion)            
+  select @id,case when @Telecom_Request_For='ID Creation' then 1    
+  when @Telecom_Request_For='ID Deletion' then 2    
+  else 0 end, [Employeeid],[Process],0,@group_id ,@group_name,'0',            
+  left([EmployeeName], charindex(' ', [EmployeeName]) - 1) AS 'FirstName',null,            
+ REVERSE(SUBSTRING(REVERSE([EmployeeName]), 1, CHARINDEX(' ', REVERSE([EmployeeName])) - 1))  AS 'LastName',            
+left([EmployeeName], charindex(' ', [EmployeeName]) - 1)+cast(Employeeid as varchar),'Nice#123','loginos',@Location,'0','Master Site','01/01/2021 5:55:12 AM','01/01/2021 5:55:12 AM','Avaya','23456',@Status,0,'null',1233,12,1,1,            
+ 1,1,getdate(),1,@item_name ,@Business_Reason           
+   from #subMenu with(nolock)      
+  EXEC sys.sp_xml_removedocument @hdoc                    
+  DROP TABLE #subMenu                  
+END 
+
+
+
+
+
+
+
+CREATE TABLE [dbo].[tbl_PM_Users](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[RequestId] [int] NOT NULL,
+	[RequestType] [int] NOT NULL,
+	[EmployeeId] [int] NOT NULL,
+	[Process] [varchar](max) NOT NULL,
+	[ProcessId] [int] NOT NULL,
+	[GroupId] [int] NULL,
+	[GroupName] [varchar](100) NULL,
+	[UserId] [int] NULL,
+	[FirstName] [varchar](100) NOT NULL,
+	[MiddleName] [varchar](100) NULL,
+	[LastName] [varchar](100) NULL,
+	[User_Name] [varchar](200) NULL,
+	[Password] [varchar](40) NULL,
+	[OSlogin] [varchar](100) NULL,
+	[Location] [varchar](200) NULL,
+	[LocationId] [int] NOT NULL,
+	[Site] [varchar](100) NULL,
+	[Hiredate] [varchar](100) NULL,
+	[GraduationDate] [varchar](100) NULL,
+	[Switch] [varchar](100) NULL,
+	[Extension] [int] NULL,
+	[SDStatus] [varchar](100) NULL,
+	[Status] [varchar](100) NULL,
+	[Description] [varchar](max) NULL,
+	[SkillNo] [int] NULL,
+	[SkillLevel] [int] NULL,
+	[COR] [nvarchar](12) NULL,
+	[CM] [nvarchar](12) NULL,
+	[Recorder] [nvarchar](12) NULL,
+	[IsDefault] [int] NULL,
+	[InsertedDate] [datetime] NOT NULL,
+	[InsertedBy] [varchar](15) NOT NULL,
+	[Item_Name] [nvarchar](200) NULL,
+	[AgentID] [int] NULL,
+	[Business_Resion] [varchar](200) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+

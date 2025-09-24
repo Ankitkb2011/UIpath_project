@@ -1,0 +1,12 @@
+CREATE proc proc_avayaagent (@RequestType int)     
+as      
+begin      
+select EmployeeID,CAST(EmployeeId as varchar)+'_'+FirstName+'_'+Process  as Name, Password,Password as RePassword ,SkillNo,SkillLevel ,AgentID  
+from tbl_PM_Users  with(nolock) where RequestType=@RequestType and SDStatus='Open' and Status=0  
+end
+-----update-------------
+create proc Update_AgentStatus (@Employeeid  int)  
+as  
+begin  
+update tbl_PM_Users set Status=1,SDStatus='Working'  where EmployeeId=@Employeeid  
+end
